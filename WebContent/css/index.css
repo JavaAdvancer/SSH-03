@@ -1,0 +1,267 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+.topBar {
+    height: 30px;
+    width: 100%;
+    background: deepskyblue;
+}
+.topBarText {
+    float: left;
+    color: black;
+    line-height: 30px;
+}
+.topBarText2 {
+    float: left;
+    color: white;
+    line-height: 30px;
+}
+.topBarTextHover:hover{
+    font-weight: bold;
+    cursor: pointer;
+}
+.welcome {
+    margin-left: 20px;
+
+}
+.login {
+    margin-left: 800px;
+    width:150px;
+}
+.login2 {
+    margin-left: 800px;
+    width:150px;
+}
+.register {
+    margin-left: 25px;
+    width:50px;
+}
+.logout {
+    margin-left: 25px;
+    width:70px;
+}
+.searchBar {
+    height: 150px;
+    width: 100%;
+    background: whitesmoke;
+}
+.searchBarPosition {
+    float: left;
+}
+.logo {
+    margin-top: 30px;
+    margin-left: 40px;
+}
+.logoText {
+    margin-top: 110px;
+    font-weight: bold;
+    font-size: large;
+}
+.searchInput input{
+    margin-left: 250px;
+    margin-top: 100px;
+    border: solid 1px deepskyblue;
+    box-shadow: 0 0 1px deepskyblue;
+    width: 300px;
+    height: 30px;
+    font-size: 20px;
+    line-height: 20px;
+}
+.searchButton input {
+    margin-top: 100px;
+    background: deepskyblue;
+    color: white;
+    height: 32px;
+    width: 55px;
+    text-align: center;
+    font-size: large;
+    border: solid deepskyblue;
+}
+.topMenu {
+    display: block;
+    border: solid 1px deepskyblue;
+    width: 220px;
+    height: 300px;
+    z-index: 5;
+}
+.menuTitle {
+    height: 50px;
+    color: white;
+    font-size: larger;
+    font-weight: bolder;
+    line-height: 50px;
+    padding-left: 15px;
+    background: deepskyblue;
+}
+.topMenu li {
+    padding-left: 20px;
+    list-style-type: none;
+    background: whitesmoke;
+    height: 30px;
+    display: block;
+    line-height: 30px;
+    font-size: large;
+}
+.topMenu li a {
+    text-decoration: none;
+    color: black;
+}
+.topMenu li:hover {
+    border: 1px solid deepskyblue;
+    border-right: 0px;
+    border-left: 0px;
+    box-shadow: 0 0 1px deepskyblue;
+    background: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+.leftMenu {
+    display: none;
+    width: 300px;
+    height: 150px;
+    border: solid 1px deepskyblue;
+    margin-left: 195px;
+    margin-top: -35px;
+    position: absolute;
+    background: white;
+    z-index: 6;
+}
+li span {
+    display: none;
+    width: 30px;
+    height: 30px;
+    background: white;
+    margin-left: 180px;
+    margin-top: -30px;
+    position: absolute;
+    z-index: 8;
+}
+.topMenu li:hover .leftMenu {
+    display: block;
+}
+.topMenu li:hover span {
+    display: block;
+}
+.barMenu {
+    float: left;
+    background: deepskyblue;
+    height: 51px;
+    width: 1125px;
+    margin-left: 222px;
+    margin-top: -302px;
+}
+.barMenu li {
+    display: block;
+    float: left;
+    line-height: 51px;
+    margin-left: 28px;
+    height: 51px;
+    width: 100px;
+    text-align: center;
+}
+.barMenu li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+.barMenu li:hover {
+    background: lightskyblue;
+}
+.container {
+    float: left;
+    margin-left: 223px;
+    margin-top: -249px;
+}
+.container ul li {
+    list-style-type: none;
+    float: left;
+    margin-left: 2px;
+    margin-top: 1px;
+}
+.categoryStyle {
+    margin-top: 10px;
+    display: block;
+    float: left;
+}
+.categoryStyle hr{
+    border: dotted 1px deepskyblue;
+    width: 1200px;
+    margin-left: 90px;
+}
+.categoryStyle div {
+    color: deepskyblue;
+    font-weight: bold;
+    margin-left: 20px;
+}
+.categoryStyle li a {
+    text-decoration: none;
+    font-size: larger;
+    color: black;
+}
+.more {
+    position: absolute;
+    margin-left: 1200px;
+    margin-top: -20px;
+    text-decoration: none;
+    color: black;
+}
+.categoryStyle li a:hover {
+    color: deepskyblue;
+}
+.categoryStyle li {
+    margin-left: 140px;
+    list-style-type: decimal;
+}
+.loginDialog {
+    display: none;
+}
+.loginDialog input {
+    border: solid 1px deepskyblue;
+    box-shadow: 0 0 1px deepskyblue;
+    width: 300px;
+    height: 30px;
+    font-size: 20px;
+    line-height: 20px;
+    margin-top: 30px;
+}
+.registerDialog {
+    display: none;
+}
+.loginDialog input[type=password] {
+     margin-left: 16px;
+ }
+.registerDialog input {
+    border: solid 1px deepskyblue;
+    box-shadow: 0 0 1px deepskyblue;
+    width: 300px;
+    height: 30px;
+    font-size: 20px;
+    line-height: 20px;
+    margin-top: 30px;
+}
+.registerDialog input[type=text] {
+    margin-left: 32px;
+}
+/*修改dialog的titlebar背景颜色为deepskyblue*/
+.ui-dialog-titlebar {
+    background: deepskyblue;
+}
+/*修改dialog的titlebar的close按钮*/
+.ui-dialog-titlebar-close {
+    display: none;
+}
+.icon_check {
+    margin-left: 10px;
+}
+.hint {
+    display: none;
+    position: absolute;
+    background: deepskyblue;
+    margin-left: 630px;
+    margin-top: 280px;
+    z-index: 4000;
+}
+a:hover {
+	cursor: pointer;
+}

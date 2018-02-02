@@ -1,0 +1,42 @@
+/**
+ * Created by Programmer on 2016/3/10.
+ */
+$(document).ready(function(){
+    $(".reset").button();
+    $(".submit").button();
+    $(".reset").click(function(){
+        $(".title").val("");
+        $(".content").val("");
+    });
+    $(".submit").click(function(){
+    	$.ajax({
+    		'type':'post',
+    		'url':'postAction',
+    		'data':{
+    			'title':$(".title").val(),
+    			'content':$(".content").val()
+    		},
+    		'success':function(data){
+    			if(data="success"){
+    				$(".hint").css({
+            			'width':300,
+            			'height':25,
+            			'color':'white',
+            			'text-align':'center'
+            		}).empty().append("<b>发布成功！</b>")
+            		  .fadeIn(2000)
+            		  .fadeOut(3000);
+    			}else{
+    				$(".hint").css({
+            			'width':300,
+            			'height':25,
+            			'color':'white',
+            			'text-align':'center'
+            		}).empty().append("<b>发布失败！</b>")
+            		  .fadeIn(2000)
+            		  .fadeOut(3000);
+    			}
+    		}
+    	});
+    });
+});

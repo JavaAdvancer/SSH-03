@@ -1,0 +1,25 @@
+body {
+    background-color: deepskyblue;
+}
+table {
+    margin-left: 200px;
+    margin-top: 20px;
+    width: 900px;
+}
+td {
+    border-bottom: dotted 1px darkgray;
+}
+tr a {
+    text-decoration: none;
+}
+tr a:hover {
+    color: black;
+}
+p {
+    position: absolute;
+    display: none;
+    background: whitesmoke;
+    width: 400px;
+    height: 600px;
+    margin-left: 955px;
+}

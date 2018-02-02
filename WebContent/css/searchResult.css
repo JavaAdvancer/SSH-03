@@ -1,0 +1,29 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+body {
+    background-color: deepskyblue;
+}
+.product {
+    background-color: gray;
+    width: 200px;
+    height: 330px;
+    margin-left: 50px;
+    margin-top: 20px;
+    float: left;
+}
+a {
+    text-decoration: none;
+}
+.sellerInfoDia {
+    display: none;
+}
+/*设置dialog的titlebar的颜色为deepskyblue*/
+.ui-dialog-titlebar {
+    background: deepskyblue;
+}
+/*关闭dialog的titlebar的close按钮*/
+.ui-dialog-titlebar-close {
+    display: none;
+}

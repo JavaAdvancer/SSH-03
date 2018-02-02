@@ -1,0 +1,28 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+.background {
+    position: absolute;
+    width: 100%;
+    height: 705px;
+    background: deepskyblue;
+}
+img {
+    float: left;
+    margin-left: 20px;
+    margin-top: 30px;
+}
+.post {
+    position: relative;
+    margin-top: 20px;
+    margin-left: 140px;
+    width: 80%;
+    height: 150px;
+    background: honeydew;
+}
+header {
+    float: left;
+    position: absolute;
+    margin-left: 200px;
+}

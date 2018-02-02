@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="userDao" class="com.exchange.dao.UserDao">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+
+	<bean id="userServices" class="com.exchange.services.UserServices">
+		<property name="userDao" ref="userDao"></property>
+	</bean>
+
+	<bean id="registerAction" class="com.exchange.action.RegisterAction"
+		scope="prototype">
+		<property name="userServices" ref="userServices"></property>
+	</bean>
+
+	<bean id="emailCheckAction" class="com.exchange.action.EmailCheckAction"
+		scope="prototype">
+		<property name="emailCheckServices" ref="emailCheckServices"></property>
+	</bean>
+
+	<bean id="emailCheckServices" class="com.exchange.services.EmailCheckServices">
+		<property name="emailCheckDao" ref="emailCheckDao"></property>
+	</bean>
+
+	<bean id="emailCheckDao" class="com.exchange.dao.EmailCheckDao">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+
+	<bean id="userLoginAction" class="com.exchange.dao.UserLoginAction">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean id="userLoginServices" class="com.exchange.services.UserLoginServices">
+		<property name="userLoginAction" ref="userLoginAction"></property>
+	</bean>
+	<bean id="loginAction" class="com.exchange.action.LoginAction"
+		scope="prototype">
+		<property name="userLoginServices" ref="userLoginServices"></property>
+	</bean>
+
+	<bean id="logoutAction" class="com.exchange.action.LogoutAction"
+		scope="prototype">
+	</bean>
+
+	<bean id="getUserAllInfoAction" class="com.exchange.action.GetAllUserInfoAction"
+		scope="prototype">
+		<property name="getAllUserInfoService" ref="getAllUserInfoService"></property>
+	</bean>
+
+	<bean id="getAllUserInfoDao" class="com.exchange.dao.GetAllUserInfoDao">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+
+	<bean id="getAllUserInfoService" class="com.exchange.services.GetAllUserInfoService">
+		<property name="getAllUserInfoDao" ref="getAllUserInfoDao"></property>
+	</bean>
+
+	<bean id="updateUserInfoAction" class="com.exchange.action.UpdateUserInfoAction"
+		scope="prototype">
+		<property name="updateUserInfoService" ref="updateUserInfoService"></property>
+	</bean>
+	<bean id="updateUserInfoService" class="com.exchange.services.UpdateUserInfoService">
+		<property name="updateUserInfoDao" ref="updateUserInfoDao"></property>
+	</bean>
+	<bean id="updateUserInfoDao" class="com.exchange.dao.UpdateUserInfoDao">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+
+	<bean id="checkPasswordAction" class="com.exchange.action.CheckPasswordAction"
+		scope="prototype">
+		<property name="checkPasswordService" ref="checkPasswordService"></property>
+	</bean>
+	<bean id="checkPasswordDao" class="com.exchange.dao.CheckPasswordDao">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean id="checkPasswordService" class="com.exchange.services.CheckPasswordService">
+		<property name="checkPasswordDao" ref="checkPasswordDao"></property>
+	</bean>
+
+	<bean id="updatePasswordAction" class="com.exchange.action.UpdatePasswordAction"
+		scope="prototype">
+		<property name="updatePasswordService" ref="updatePasswordService"></property>
+	</bean>
+	<bean id="updatePasswordDao" class="com.exchange.dao.UpdatePasswordDao">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean id="updatePasswordService" class="com.exchange.services.UpdatePasswordService">
+		<property name="updatePasswordDao" ref="updatePasswordDao"></property>
+	</bean>
+	<bean id="checkIsLoginAction" class="com.exchange.action.CheckIsLoginAction"
+		scope="prototype">
+	</bean>
+	<bean id="uploadProductInfoAction" class="com.exchange.action.UploadProductInfoAction"
+		scope="prototype">
+		<property name="updateProductInfoService" ref="updateProductInfoService"></property>
+	</bean>
+	<bean id="updateProductInfoDao" class="com.exchange.dao.UpdateProductInfoDao">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean id="updateProductInfoService" class="com.exchange.services.UpdateProductInfoService">
+		<property name="updateProductInfoDao" ref="updateProductInfoDao"></property>
+	</bean>
+	<bean id="updateUserPicAction" class="com.exchange.action.UpdateUserPicAction"
+		scope="prototype">
+		<property name="updateUserPicService" ref="updateUserPicService"></property>
+	</bean>
+	<bean id="updateUserPicService" class="com.exchange.services.UpdateUserPicService">
+		<property name="updateUserPicDao" ref="updateUserPicDao"></property>
+	</bean>
+	<bean id="updateUserPicDao" class="com.exchange.dao.UpdateUserPicDao">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean id="postAction" class="com.exchange.action.PostAction" scope="prototype">
+		<property name="postService" ref="postService"></property>
+	</bean>
+	<bean id="postService" class="com.exchange.services.PostService">
+		<property name="postDao" ref="postDao"></property>
+	</bean>
+	<bean id="postDao" class="com.exchange.dao.PostDao">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean id="showAllProductAction" class="com.exchange.action.ShowAllProductAction" scope="prototype">
+		<property name="showAllProductService" ref="showAllProductService"></property>
+	</bean>
+	<bean id="showAllProductService" class="com.exchange.services.ShowAllProductService">
+		<property name="showAllProductDao" ref="showAllProductDao"></property>
+	</bean>
+	<bean id="showAllProductDao" class="com.exchange.dao.ShowAllProductDao">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean id="getSellerInfoAction" class="com.exchange.action.GetSellerInfoAction" scope="prototype">
+		<property name="getSellerInfoService" ref="getSellerInfoService"></property>
+	</bean>
+	<bean id="getSellerInfoService" class="com.exchange.services.GetSellerInfoService">
+		<property name="getSellerInfoDao" ref="getSellerInfoDao"></property>
+	</bean>
+	<bean id="getSellerInfoDao" class="com.exchange.dao.GetSellerInfoDao">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean id="getAllPostAction" class="com.exchange.action.GetAllPostAction" scope="prototype">
+		<property name="getAllPostService" ref="getAllPostService"></property>
+	</bean>
+	<bean id="getAllPostService" class="com.exchange.services.GetAllPostService">
+		<property name="getAllPostDao" ref="getAllPostDao"></property>
+	</bean>
+	<bean id="getAllPostDao" class="com.exchange.dao.GetAllPostDao">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean id="getSelfPostAction" class="com.exchange.action.GetSelfPostAction" scope="prototype">
+		<property name="getSelfPostService" ref="getSelfPostService"></property>
+	</bean>
+	<bean id="getSelfPostService" class="com.exchange.services.GetSelfPostService">
+		<property name="getSelfPostDao" ref="getSelfPostDao"></property>
+	</bean>
+	<bean id="getSelfPostDao" class="com.exchange.dao.GetSelfPostDao">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean id="delSelfPostAction" class="com.exchange.action.DelSelfPostAction" scope="prototype">
+		<property name="delSelfPostService" ref="delSelfPostService"></property>
+	</bean>
+	<bean id="delSelfPostService" class="com.exchange.services.DelSelfPostService">
+		<property name="delSelfPostDao" ref="delSelfPostDao"></property>
+	</bean>
+	<bean id="delSelfPostDao" class="com.exchange.dao.DelSelfPostDao">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean id="saveSelfPostAction" class="com.exchange.action.SaveSelfPostAction" scope="prototype">
+		<property name="saveSelfPostService" ref="saveSelfPostService"></property>
+	</bean>
+	<bean id="saveSelfPostService" class="com.exchange.services.SaveSelfPostService">
+		<property name="saveSelfPostDao" ref="saveSelfPostDao"></property>
+	</bean>
+	<bean id="saveSelfPostDao" class="com.exchange.dao.SaveSelfPostDao">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean id="getSelfProductAction" class="com.exchange.action.GetSelfProductAction" scope="prototype">
+		<property name="getSelfProductService" ref="getSelfProductService"></property>
+	</bean>
+	<bean id="getSelfProductService" class="com.exchange.services.GetSelfProductService">
+		<property name="getSelfProductDao" ref="getSelfProductDao"></property>
+	</bean>
+	<bean id="getSelfProductDao" class="com.exchange.dao.GetSelfProductDao">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean id="getProductInfoAction" class="com.exchange.action.GetProductInfoAction" scope="prototype">
+		<property name="getProductInfoService" ref="getProductInfoService"></property>
+	</bean>
+	<bean id="getProductInfoService" class="com.exchange.services.GetProductInfoService">
+		<property name="getProductInfoDao" ref="getProductInfoDao"></property>
+	</bean>
+	<bean id="getProductInfoDao" class="com.exchange.dao.GetProductInfoDao">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean id="getNoticeAction" class="com.exchange.action.GetNoticeAction" scope="prototype">
+		<property name="getNoticeService" ref="getNoticeService"></property>
+	</bean>
+	<bean id="getNoticeService" class="com.exchange.services.GetNoticeService">
+		<property name="getNoticeDao" ref="getNoticeDao"></property>
+	</bean>
+	<bean id="getNoticeDao" class="com.exchange.dao.GetNoticeDao">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean id="getAllProductsByType" class="com.exchange.action.GetAllProductsByType" scope="prototype">
+		<property name="getAllProductsByTypeService" ref="getAllProductsByTypeService"></property>
+	</bean>
+	<bean id="getAllProductsByTypeService" class="com.exchange.services.GetAllProductsByTypeService">
+		<property name="getAllProductsByTypeDao" ref="getAllProductsByTypeDao"></property>
+	</bean>
+	<bean id="getAllProductsByTypeDao" class="com.exchange.dao.GetAllProductsByTypeDao">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+</beans>  
+

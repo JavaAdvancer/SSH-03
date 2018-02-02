@@ -1,0 +1,93 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+.infoCenter {
+    background: deepskyblue;
+    width: 100%;
+    height: 768px;
+}
+.captionStyle {
+     float: left;
+ }
+
+.logo {
+    margin-left: 150px;
+    margin-top: 50px;
+}
+.logoText {
+    margin-top: 100px;
+    font-size: larger;
+}
+.separateLine {
+    border: solid 1px gray;
+    background: gray;
+    height: 50px;
+    margin-top: 100px;
+}
+.title {
+    margin-top: 130px;
+}
+.infoContainer {
+    position: absolute;
+    width: 900px;
+    height: 500px;
+    background: white;
+    margin-top: 200px;
+    margin-left: 230px;
+}
+/*修改tabs的title bar的背景颜色 颜色为deepskyblue*/
+.ui-tabs-nav {
+    background: deepskyblue;
+}
+#tabs input {
+    margin-top: 20px;
+}
+#tab1,#tab2 {
+    margin-left: 250px;
+}
+.name,.age,.school,.gender,.email,.address {
+    margin-left: 35px;
+}
+select {
+    margin-left: 30px;
+}
+.infohint {
+    display: block;
+    position: absolute;
+    background: deepskyblue;
+    margin-left: 80px;
+    margin-top: -280px;
+}
+/*修改dialog的titlebar背景颜色为deepskyblue*/
+.ui-dialog-titlebar {
+    background: deepskyblue;
+}
+/*修改dialog的titlebar的close按钮*/
+.ui-dialog-titlebar-close {
+    display: none;
+}
+.hint {
+	margin-top: 30px;
+}
+.picture {
+    position: absolute;
+    margin-left: -250px;
+}
+.tab5Hint {
+    position: absolute;
+    background: deepskyblue;
+    display: none;
+    margin-left: 300px;
+}
+table {
+    text-align: center;
+}
+a:hover {
+    cursor: pointer;
+    color: deepskyblue;
+}
+td {
+    overflow: hidden;
+    height: 30px;
+}

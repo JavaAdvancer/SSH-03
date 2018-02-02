@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+	<constant name="struts.i18n.encoding" value="UTF-8" />
+	<constant name="struts.enable.DynamicMethodInvocation" value="false" />
+	<constant name="struts.devMode" value="false" />
+
+	<package name="default" namespace="/" extends="struts-default,json-default">
+		<action name="registerAction" class="registerAction" method="registerAction">
+			<result type="json">root</result>
+		</action>
+
+		<action name="emailCheckAction" class="emailCheckAction"
+			method="emailCheckAction">
+			<result type="json">root</result>
+		</action>
+
+		<action name="loginAction" class="loginAction" method="loginAction">
+			<result type="json">root</result>
+		</action>
+
+		<action name="logoutAction" class="logoutAction" method="logoutAction">
+			<result type="json">root</result>
+		</action>
+
+		<action name="getUserAllInfoAction" class="getUserAllInfoAction"
+			method="getAllUserInfoAction">
+			<result type="json">root</result>
+		</action>
+
+		<action name="updateUserInfoAction" class="updateUserInfoAction"
+			method="updateUserInfoAction">
+			<result type="json">root</result>
+		</action>
+
+		<action name="checkPasswordAction" class="checkPasswordAction"
+			method="checkPasswordAction">
+			<result type="json">root</result>
+		</action>
+
+		<action name="checkIsLoginAction" class="checkIsLoginAction"
+			method="checkIsLoginAction">
+			<result type="json">root</result>
+		</action>
+
+		<action name="updatePasswordAction" class="updatePasswordAction"
+			method="updatePasswordAction">
+			<result type="json">root</result>
+		</action>
+
+		<action name="uploadProductInfoAction" class="uploadProductInfoAction"
+			method="uploadProductInfoAction">
+			<result name="success">/success.jsp</result>
+		</action>
+
+		<action name="updateUserPicAction" class="updateUserPicAction"
+			method="updateUserPicAction">
+			<result name="success">/success.jsp</result>
+		</action>
+
+		<action name="postAction" class="postAction"
+			method="postAction">
+			<result type="json">root</result>
+		</action>
+		
+		<action name="showAllProductAction" class="showAllProductAction"
+			method="showAllProductAction">
+			<result type="json">root</result>
+		</action>
+		
+		<action name="getSellerInfoAction" class="getSellerInfoAction"
+			method="getSellerInfoAction">
+			<result type="json">root</result>
+		</action>
+		
+		<action name="getAllPostAction" class="getAllPostAction"
+			method="getAllPostAction">
+			<result type="json">root</result>
+		</action>
+		<action name="getSelfPostAction" class="getSelfPostAction"
+			method="getSelfPostAction">
+			<result type="json">root</result>
+		</action>
+		<action name="delSelfPostAction" class="delSelfPostAction"
+			method="delSelfPostAction">
+			<result type="json">root</result>
+		</action>
+		<action name="saveSelfPostAction" class="saveSelfPostAction"
+			method="saveSelfPostAction">
+			<result type="json">root</result>
+		</action>
+		<action name="getSelfProductAction" class="getSelfProductAction"
+			method="getSelfProductAction">
+			<result type="json">root</result>
+		</action>
+		<action name="getProductInfoAction" class="getProductInfoAction"
+			method="getProductInfoAction">
+			<result type="json">root</result>
+		</action>
+		<action name="getNoticeAction" class="getNoticeAction"
+			method="getNoticeAction">
+			<result type="json">root</result>
+		</action>
+		<action name="getAllProductsByType" class="getAllProductsByType"
+			method="getAllProductsByType">
+			<result type="json">root</result>
+		</action>
+	</package>
+
+</struts>
